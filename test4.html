@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+<body>
+    <script>
+        function reverseString(str){
+        if(str === ''){
+        return "";
+        }
+        return reverseString(str.substring(1)) + str.charAt(0);
+        }
+        let str = 'welcome'
+        document.write(reverseString(str));
+   </script>
+</body>
+</html>

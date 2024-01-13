@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consecutive</title>
+</head>
+<body>
+    <script>
+        function getMaxLength(arr, n) {
+
+            let count = 0;
+
+            let result = 0;
+        
+            for (let i = 0; i < n; i++) {
+
+    // Reset count when 0 is found
+
+    if (arr[i] == 0)
+
+        count = 0;
+
+
+    // If 1 is found, increment
+
+    // count and update result
+
+    // if count becomes more.
+
+    else {
+
+        // increase count
+
+        count++;
+
+        result = Math.max(result, count);
+
+    }
+
+}
+
+            return result;
+}
+
+            let arr = new Array(0,1,1,0,0,1,1,1,1,0,1,0,1);
+            
+            let n = arr.length;
+          
+             document.write(getMaxLength(arr, n))
+    </script>
+</body>
+</html>

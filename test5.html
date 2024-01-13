@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeated Characters</title>
+</head>
+<body>
+    <script>
+         function printrepearted(str) {
+    let charCount = {};
+ 
+    for (let i = 0; i < str.length; i++) {
+        let character = str[i];
+        charCount[character] = (charCount[character] || 0) + 1;
+    }
+ 
+    for (let char in charCount) {
+        if (charCount[char] > 1) {
+            document.write(char + ", count = " + charCount[char]);
+        }
+    }
+}
+let str ="Welcome";
+printrepeated(str);
+   </script>
+</body>
+</html> 
